@@ -1,6 +1,6 @@
 /* Imports */
 
-const { blanchedalmond } = require("color-name")
+/*const { blanchedalmond } = require("color-name")*/
 
 /* Get DOM Elements */
 
