@@ -9,31 +9,10 @@ const submitButton = document.getElementById('submit');
 const promptPage = document.getElementById('prompt');
 const outcomePage = document.getElementById('outcome');
 const answerP = document.getElementById('answer');
-const resetButton = document.getElementById('reset');
+const resetBtn = document.getElementById('reset');
+/*console.log(resetBtn);*/
+
 /* State */
-
-/* Events */
-
-submitButton.addEventListener('click', () => {
-    toggleSections();
-    const randomInt = Math.floor(Math.random() * answers.length);
-    const randomChoice = answers[randomInt];
-    /*console.log(randomInt);*/
-    /*console.log(randomChoice);*/
-    /*console.log('answers[12]'), answers[12];*/
-    answerP.textContent = randomChoice;
-});
-
-resetBtn.addEventListener('click', () => {
-    // hide 8 ball and the answer
-    // show prompt
-});
-
-function toggleSections() {
-    promptPage.classList.toggle('hide');
-    outcomePage.classList.toggle('hide');
-}
-
 const answers = [
     'Yes, definitely',
     'It is certain',
@@ -55,6 +34,31 @@ const answers = [
     'Outlook not so good',
     'Very doubtful',
 ];
+/* Events */
+
+submitButton.addEventListener('click', () => {
+    toggleSections();
+    const randomInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randomInt];
+    /*console.log(randomInt);*/
+    /*console.log(randomChoice);*/
+    /*console.log('answers[12]'), answers[12];*/
+    answerP.textContent = randomChoice;
+});
+
+/*resetBtn.addEventListener('click', () => {
+    // hide 8 ball and the answer
+    // show prompt
+    toggleSections();
+    console.log('clicking the reset button');
+});*/
+
+function toggleSections() {
+    promptPage.classList.toggle('hide');
+    outcomePage.classList.toggle('hide');
+}
+
+
 
 
 /*button clicks for prompt and ask again
