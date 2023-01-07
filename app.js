@@ -1,3 +1,4 @@
+
 /* Imports */
 
 /*const { blanchedalmond } = require("color-name")*/
@@ -17,9 +18,9 @@ submitButton.addEventListener('click', () => {
     toggleSections();
     const randomInt = Math.floor(Math.random() * answers.length);
     const randomChoice = answers[randomInt];
-    console.log(randomInt);
-    console.log(randomChoice);
-    console.log('answers[12]'), answers[12];
+    /*console.log(randomInt);*/
+    /*console.log(randomChoice);*/
+    /*console.log('answers[12]'), answers[12];*/
     answerP.textContent = randomChoice;
 });
 
@@ -54,6 +55,7 @@ const answers = [
     'Outlook not so good',
     'Very doubtful',
 ];
+
 
 /*button clicks for prompt and ask again
 hiding 8 ball and random answer
