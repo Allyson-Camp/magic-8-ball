@@ -33,3 +33,12 @@ header .logo {
 main {
     padding: 20px;
 }
+
+#placeholder-text {
+    font-weight: bolder;
+    font-style: var(--background);
+}
+
+.hide {
+    display: none;
+}
