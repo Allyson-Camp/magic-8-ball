@@ -1,4 +1,3 @@
-
 /* Imports */
 
 /*const { blanchedalmond } = require("color-name")*/
@@ -9,13 +8,30 @@ const submitBtn = document.getElementById('submit');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
 const answerP = document.getElementById('answer');
-const resetBtn  = document.getElementById('reset');
-
-
-
+const resetBtn = document.getElementById('reset');
 
 /* State */
-/*const answers = [
+
+/* Events */
+
+submitBtn.addEventListener('click', () => {
+    toggleSections();
+    const randomInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randomInt];
+    answerP.textContent = randomChoice;
+});
+
+// resetBtn.addEventListener('click', () => {
+    // hide ball and answer
+    // show prompt
+// });
+
+function toggleSections() {
+    promptSection.classList.toggle('hide');
+    fortuneSection.classList.toggle('hide');
+}
+
+const answers = [
     'Yes, definitely',
     'It is certain',
     'It is decidedly so',
@@ -36,35 +52,9 @@ const resetBtn  = document.getElementById('reset');
     'Outlook not so good',
     'Very doubtful',
 ];
-/* Events */
 
-submitBtn.addEventListener('click', () => {
-    // hide prompt
-    // display the image
-    toggleSections();
-    }
-    
-    
-    function toggleSections() {
-        promptSection.classList.toggle('hide');
-        fortuneSection.classList.toggle('hide');
-    }
-    
-    
-    /* Display Functions */
-    
-    // (don't forget to call any display functions you want to run on page load!)
-    
-    /* HTML */
-    /* <!-- h1 Header
-     Section
-        p tag w/ prompt
-        input Bar
-        submit btn 
-    Section 
-    
-    section
-        image of ball 
-        p tag with random answer
-        ask again button
-    section */
+/* Display Functions */
+
+// (don't forget to call any display functions you want to run on page load!)
+
+/* HTML */

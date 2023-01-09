@@ -32,6 +32,7 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image:
 }
 
 #placeholder-text {
@@ -41,4 +42,8 @@ main {
 
 .hide {
     display: none;
+}
+
+.image {
+    height: 400px;
 }
